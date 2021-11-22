@@ -6,6 +6,8 @@ import styled from "styled-components";
 import Date from './Date'
 
 const StyledPost = styled.div`
+  border-radius: 25px;
+  border: 1px solid lightgray;
   margin: 10px;
 `;
 
@@ -16,6 +18,10 @@ const InfoDiv = styled.div`
   align-items: center;
 `;
 
+const PostBySpan = styled.span`
+  margin-right: 10px;
+`
+
 const CommentsDiv = styled.div`
   text-align: right;
 `;
@@ -24,10 +30,6 @@ const CommentsBtn = styled.button`
   color: gray;
   background-color: white;
   border: 0px;
-`;
-
-const DateSpan = styled.span`
-  font-size: 14px;
 `;
 
 type Props = {
@@ -64,7 +66,7 @@ const Post: React.FC<Props> = ({ post }) => {
         <h2 className="card-title">{post.title}</h2>
         <InfoDiv>
           <div>
-            Posted by
+            <PostBySpan>Posted by</PostBySpan>
             {post.authors.map((author) => (
               <Author key={author.id} author={author} />
             ))}

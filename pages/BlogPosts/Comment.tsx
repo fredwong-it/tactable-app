@@ -7,7 +7,7 @@ const CardDiv = styled.div`
   border: 1px solid #f5f5f5;
   border-radius: 25px;
   margin-top: 10px;
-  background-color: #f8f8f8;
+  background-color: #F0F0F0;
 `;
 
 const TitleDiv = styled.div`

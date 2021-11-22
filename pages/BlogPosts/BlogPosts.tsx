@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { fetchPosts } from "../hooks/useFetch";
 
 const H1 = styled.h1`
-width: 100%;
+  width: 100%;
   margin-bottom: 30px;
 `;
 
@@ -72,11 +72,11 @@ const BlogPosts: NextPage = () => {
   const startPageIndex = (currentPage - 1) * pageSize;
 
   return (
-    <>
+    <div id="divBlogPosts">
       <H1 className="c-title">Blog Posts</H1>
       {renderPosts()}
       {renderPagination()}
-    </>
+    </div>
   );
 };
 
