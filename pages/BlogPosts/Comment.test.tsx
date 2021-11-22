@@ -15,7 +15,7 @@ const comment: IComment = {
 };
 
 describe("Comment", () => {
-  it("should render post without comments", () => {
+  it("should render comment properly", () => {
     // Given
 
     // When

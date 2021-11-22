@@ -9,7 +9,7 @@ const DateSpan = styled.span`
   margin-bottom: 5px;
 `;
 
-const formatDate = (dateStr: string, fullDate: boolean = false) => {
+export const formatDate = (dateStr: string, fullDate: boolean = false) => {
   if (fullDate) {
     return moment(dateStr).format("MM/DD/YYYY, h:mm:ss a");
   } else {
@@ -27,7 +27,7 @@ const Date: React.FC<Props> = ({ children }) => {
       placement="bottom"
       overlay={<Tooltip>{formatDate(children, true)}</Tooltip>}
     >
-      <DateSpan>{formatDate(children)}</DateSpan>
+      <DateSpan className="c-date">{formatDate(children)}</DateSpan>
     </OverlayTrigger>
   );
 };

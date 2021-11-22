@@ -16,8 +16,8 @@ type Props = {
 const Author: React.FC<Props> = ({ author }) => {
   return (
     <span>
-      <StyledImg src={author.avatar} />
-      <span>{author.name} </span>
+      <StyledImg className="c-img" src={author.avatar} />
+      <span className="c-name">{author.name}</span>
     </span>
   )
 }
