@@ -19,7 +19,7 @@ const InfoDiv = styled.div`
 `;
 
 const PostBySpan = styled.span`
-  margin-right: 10px;
+  margin-right: 5px;
 `
 
 const CommentsDiv = styled.div`
