@@ -6,7 +6,7 @@ import Author from "./Author";
 import Comment from "./Comment";
 import Date from "./Date";
 
-const post: IPost = {
+export const mockPost: IPost = {
   title: "title 1",
   description:
     "Similique ipsum ut quae et cum. Quas et nisi at. Mollitia dolor quo dolores quia dolorem quam harum aut quis. Est enim vitae voluptate aliquid eligendi quia est doloremque.",
@@ -49,7 +49,7 @@ describe("Post", () => {
     // Given
 
     // When
-    const wrapper = shallow(<Post post={post} />);
+    const wrapper = shallow(<Post post={mockPost} />);
     const h2 = wrapper.find("h2");
     const date = wrapper.find(Date);
     const descrption = wrapper.find("p.card-text");
@@ -57,9 +57,9 @@ describe("Post", () => {
     const comments = wrapper.find(Comment);
 
     // Then
-    expect(h2.text()).toEqual(post.title);
-    expect(date.props().children).toEqual(post.createdAt);
-    expect(descrption.text()).toEqual(post.description);
+    expect(h2.text()).toEqual(mockPost.title);
+    expect(date.props().children).toEqual(mockPost.createdAt);
+    expect(descrption.text()).toEqual(mockPost.description);
     expect(authors.length).toEqual(2);
     expect(comments.exists()).toEqual(false);
   });
@@ -73,7 +73,7 @@ describe("Post", () => {
       .mockReturnValue([showComments, setShowComments]);
 
     // When
-    const wrapper = shallow(<Post post={post} />);
+    const wrapper = shallow(<Post post={mockPost} />);
     const comments = wrapper.find(Comment);
 
     // Then

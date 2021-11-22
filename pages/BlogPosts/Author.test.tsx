@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 import { IAuthor } from "../../types";
 import Author from "./Author";
 
-const author: IAuthor = {
+const mockAuthor: IAuthor = {
   createdAt: "2021-09-01T08:03:46.399Z",
   name: "Alison Ondricka",
   avatar: "https://cdn.fakercloud.com/avatars/ricburton_128.jpg",
@@ -17,12 +17,12 @@ describe("Author", () => {
     // Given
 
     // When
-    const wrapper = shallow(<Author author={author} />);
+    const wrapper = shallow(<Author author={mockAuthor} />);
     const img = wrapper.find(".c-img");
     const name = wrapper.find(".c-name");
 
     // Then
-    expect(img.props().src).toEqual(author.avatar);
-    expect(name.text()).toEqual(author.name);
+    expect(img.props().src).toEqual(mockAuthor.avatar);
+    expect(name.text()).toEqual(mockAuthor.name);
   });
 });

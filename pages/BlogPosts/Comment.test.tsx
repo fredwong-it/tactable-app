@@ -4,7 +4,7 @@ import { IComment } from "../../types";
 import Comment from "./Comment";
 import Date from "./Date";
 
-const comment: IComment = {
+const mockComment: IComment = {
   createdAt: "2021-03-04T23:50:32.618Z",
   title: "Qui quo non omnis tenetur.",
   description:
@@ -19,14 +19,14 @@ describe("Comment", () => {
     // Given
 
     // When
-    const wrapper = shallow(<Comment comment={comment} />);
+    const wrapper = shallow(<Comment comment={mockComment} />);
     const h6 = wrapper.find("h6");
     const date = wrapper.find(Date);
     const descrption = wrapper.find(".card-text");
 
     // Then
-    expect(h6.text()).toEqual(comment.title);
-    expect(date.props().children).toEqual(comment.createdAt);
-    expect(descrption.text()).toEqual(comment.description);
+    expect(h6.text()).toEqual(mockComment.title);
+    expect(date.props().children).toEqual(mockComment.createdAt);
+    expect(descrption.text()).toEqual(mockComment.description);
   });
 });

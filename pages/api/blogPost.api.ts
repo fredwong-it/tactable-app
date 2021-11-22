@@ -1,7 +1,7 @@
 import axios from "axios";
 import { IPost } from "../../types";
 
-const fetchPosts = async (): Promise<IPost[]> => {
+const getPosts = async (): Promise<IPost[]> => {
   let { data } = await axios.get<IPost[]>(
     "https://6144e843411c860017d256f0.mockapi.io/api/v1/posts"
   );
@@ -15,4 +15,4 @@ const fetchPosts = async (): Promise<IPost[]> => {
   return data;
 };
 
-export { fetchPosts };
+export { getPosts };
