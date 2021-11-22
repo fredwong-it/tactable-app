@@ -1,4 +1,4 @@
-import { useState } from "react";
+import * as React from 'react'
 import { IPost } from "../../types";
 import Author from "./Author";
 import Comment from "./Comment";
@@ -35,7 +35,7 @@ type Props = {
 };
 
 const Post: React.FC<Props> = ({ post }) => {
-  const [showComments, setShowComments] = useState(false);
+  const [showComments, setShowComments] = React.useState(false);
 
   const handleClick = () => {
     setShowComments(!showComments);

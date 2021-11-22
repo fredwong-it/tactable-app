@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { IAuthor } from '../../types'
 import styled from 'styled-components'
 

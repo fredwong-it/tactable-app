@@ -1,5 +1,6 @@
+import * as React from 'react'
 import styled from "styled-components";
-import moment from "moment";
+import * as moment from "moment";
 import { Tooltip, OverlayTrigger } from "react-bootstrap";
 
 const DateSpan = styled.span`

@@ -1,5 +1,5 @@
 export interface IPost {
-  id: number
+  id: string
   title: string
   description: string
   createdAt: string
@@ -9,19 +9,19 @@ export interface IPost {
 }
 
 export interface IAuthor {
-  id: number
+  id: string
   name: string
   avatar: string
   createdAt: string
   updatedAt: string
-  postId: number
+  postId: string
 }
 
 export interface IComment {
-  id: number
+  id: string
   title: string
   description: string
   createdAt: string
   updatedAt: string
-  postId: number
+  postId: string
 }

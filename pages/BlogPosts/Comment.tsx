@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { IComment } from "../../types";
 import styled from "styled-components";
 import Date from './Date'
@@ -29,12 +30,6 @@ const Comment: React.FC<Props> = ({ comment }) => {
       <div className="card-body">
         <TitleDiv>
           <h6 className="card-title">{comment.title}</h6>
-          {/* <OverlayTrigger
-            placement="bottom"
-            overlay={<Tooltip>{formatDate(comment.createdAt, true)}</Tooltip>}
-          >
-            <DateSpan>{formatDate(comment.createdAt)}</DateSpan>
-          </OverlayTrigger> */}
           <Date>{comment.createdAt}</Date>
         </TitleDiv>
         <CommentDesc className="card-text">{comment.description}</CommentDesc>
